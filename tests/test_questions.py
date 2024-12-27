@@ -5,7 +5,7 @@ from data import Data
 
 
 class TestPageQuestionsAboutImportant:
-    @allure.title("Тест на соответствие текста к вопросу о стоимости")
+    @allure.title("Тест на соответствие текста к вопросам")
     @pytest.mark.parametrize('arrow_number, expected_text', Data.arrow_names)
     def test_questions_price(self, driver, arrow_number, expected_text):
         questions_page = QuestionsPage(driver)

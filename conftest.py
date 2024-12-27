@@ -3,7 +3,7 @@ from selenium import webdriver
 from selenium.webdriver.firefox.options import Options
 
 from curl import *
-from pages.questions_page import QuestionsPage
+
 
 @pytest.fixture(scope='function')
 def driver():

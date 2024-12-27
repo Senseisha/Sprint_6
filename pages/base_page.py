@@ -21,8 +21,7 @@ class BasePage:
         element = self.wait_for_element(locator, timeout)
         element.click()
 
-    # @allure.step("Получить текст элемента")
-    # def get_text_on_element(self, locator, timeout=10):
-    #     element = self.wait_for_load_home_page(locator, timeout)
-    #     return element.text
+    @allure.step("Ожидание загрузки новой страницы")
+    def wait_new_page(self, locator, timeout=10):
+        return WebDriverWait(self.driver, timeout).until(EC.visibility_of_element_located(locator))
 
