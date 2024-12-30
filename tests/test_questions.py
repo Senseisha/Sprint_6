@@ -11,6 +11,7 @@ class TestPageQuestionsAboutImportant:
         questions_page = QuestionsPage(driver)
 
         questions_page.scroll_to_questions()
+        questions_page.load_main_page()
         questions_page.click_on_arrow(arrow_number)
 
         assert questions_page.check_correct_text(arrow_number, expected_text)
